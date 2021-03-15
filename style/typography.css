@@ -1,0 +1,38 @@
+:root {
+    --black: #323232;
+    --white: #FFFFFF;
+    --lilac: #8B84B4; /* background */
+    --violet: #6B6392; /* highlighted text */
+    /*
+    --pastel: #D7D5E8;
+    --grape: #3D235A;
+    */
+}
+
+html {
+    font-family: 'FedraSansAltPro', sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    scroll-behavior: smooth;
+    color: var(--black);
+}
+body {
+    color: inherit;
+}
+h1, h2, h3, h4 {
+    font-weight: normal;
+    margin: 0;
+}
+h1 {
+    font-size: 2em;
+}
+h2 {
+    font-size: 3.125em;
+    padding: 0 0 .75em;
+}
+h3 {
+    font-size: 1.8em;
+}
+p {
+    text-align: left;
+}

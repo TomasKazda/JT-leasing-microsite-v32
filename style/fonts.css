@@ -1,0 +1,23 @@
+@font-face {
+    font-family: 'FedraSansAltPro';
+    src: local('Free Fedra Sans Alt Pro Book'), local('Free Fedra Sans Alt Pro'),
+         url('../fonts/FedraSansAltPro-Book.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'FedraSansAltPro';
+    src: local('Free Fedra Sans Alt Pro Book Medium'),
+         url('../fonts/FedraSansAltPro-Medium.otf') format('opentype');
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'FedraSansAltPro';
+    src: local('Free Fedra Sans Alt Pro Book Light'),
+         url('../fonts/FedraSansAltPro-Light.otf') format('opentype');
+    font-weight: 300;
+    font-style: normal;
+}
