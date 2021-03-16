@@ -1,0 +1,125 @@
+.black { background-color: #323232 !important; background-color: var(--black) !important; }
+.white { background-color: #FFFFFF !important; background-color: var(--white) !important; }
+.lilac { background-color: #8B84B4 !important; background-color: var(--lilac) !important; }
+.violet { background-color: #6B6392 !important; background-color: var(--violet) !important; }
+
+.light {
+    font-weight: lighter;
+}
+.heavy {
+    font-weight: bold;
+    font-size: 1.77778em;
+}
+
+
+
+.timeline {
+    display: flex;
+    height: 125px;
+    padding: 1.5em 0;
+    margin: 0;
+    overflow-x: auto;
+    scrollbar-color: var(--grape) var(--violet);
+    scrollbar-width: thin;
+    -ms-overflow-style: auto;
+}
+.timeline::-webkit-scrollbar {
+    height: 10px;
+}
+.timeline::-webkit-scrollbar-track {
+    background: var(--violet);
+}
+.timeline::-webkit-scrollbar-thumb {
+    background: var(--grape);
+}
+.timeline > * {
+    flex-shrink: 0;
+}
+.calculate-limitedoffer {
+    background-color: #D7D5E8;
+    background-color: var(--pastel);
+    border-radius: .5em;
+    color: #323232;
+    color: var(--black);
+    font-size: .666667em;
+    font-weight: bold;
+    text-align: right;
+    padding: 1.3333em 2em;
+}
+.calculate-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+.calculate-table tr {
+    border-top: 1.5px solid #FFFFFF;
+    border-top: 1.5px solid var(--white);
+    border-bottom: 1.5px solid #FFFFFF;
+    border-bottom: 1.5px solid var(--white);
+}
+.calculate-table tr > * {
+    display: block;
+    padding: 0.2em;
+}
+.calculate-table td { white-space: nowrap; }
+.calculate-table td:nth-child(2) { 
+    text-align: right; 
+    font-weight: bold;
+}
+.calculate-table-strong {
+    background-color: #D7D5E8;
+    background-color: var(--pastel);
+    color: #3D235A;
+    color: var(--grape);
+}
+.calculate-table-small {
+    font-size: 0.85em;
+    font-weight: normal;
+}
+.feedback-item h3 {
+    padding: 1em 0;
+}
+.bodyfooter {
+    position: relative;
+}
+
+.bodyfooter::before {
+    content: "";
+    display: block;
+    position: relative;
+    height: 116px;
+    z-index: 1;
+    background-image: url(../img/OCC_COVER_1920.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center top;
+}
+
+.contact dt {
+    font-size: 1.555556em;
+}
+
+.address p {
+    margin: 0;
+}
+.address a {
+    color: inherit;
+}
+.logo-wrapper {
+    display: flex;
+    justify-content: space-between;
+}
+.logo-nadace > span {
+    position: absolute;
+    left: -9999px;
+}
+.logo-nadace::before {
+    content: url(../img/nadaceJT.svg);
+    display: block;
+}
+
+
+/* mobil only features */
+@media only screen and (max-width: 759.9px) {
+
+  
+}

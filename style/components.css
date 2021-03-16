@@ -3,14 +3,6 @@
 .lilac { background-color: #8B84B4 !important; background-color: var(--lilac) !important; }
 .violet { background-color: #6B6392 !important; background-color: var(--violet) !important; }
 
-.light {
-    font-weight: lighter;
-}
-.heavy {
-    font-weight: bold;
-    font-size: 1.77778em;
-}
-
 .body {     
     overflow: hidden;
     position: relative;
@@ -19,9 +11,6 @@
     max-width: 960px;
     margin: 0 auto;
     padding: 2em 1.5em;
-}
-.bodyheader { 
-    /*padding-bottom: 37.760417%;*/
 }
 .bodyheader h1 > span { 
     position: absolute;
@@ -45,39 +34,30 @@
     background-image: url(../img/JTLeasing_krystal_3D_8bit_448.png);
     background-repeat: no-repeat;
     background-size: contain;
-    background-position: top 5% right -150px;
-}
-
-.bodyheader::before {
-    content: "";
-    position: absolute;
-    top: 125px;
-    height: 58px;
-    right: 0;
-    left: 0;
-    z-index: 1;
-    background-image: url(../img/OCC_COVER_960.jpg);
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center top;
+    background-position: top 10% right -150px;
 }
 
 .bodyheader .trailer {
-    padding-top: 160px;
-    font-size: 1.25em;
+    padding-top: 165px;
+    font-size: 1.25em; /*1.75*/
+    margin: 0 -.33em;
+    max-width: 420px;
+}
+
+.trailer .claim {
+    font-size: 2.32143em;
+    font-weight: 300;
+    max-width: 300px;
+}
+
+.signature {
     font-weight: bold;
 }
-.bodyheader .trailer p:nth-child(1) {
-    max-width: 275px;
-}
-.bodyheader .trailer p:nth-child(2) {
-    max-width: 385px;
-}
+
 .claim { 
     margin: 0;
     padding: .5em 0;
     font-size: 2em;
-    font-weight: bold;
 }
 .stripe::before {
     content: "";
@@ -90,31 +70,85 @@
     background-size: cover;
     background-position: top center;
 }
+
 .containerSpecs { 
-    margin-left: 64px;
-    margin-left: calc(50px + 1.3333333em);
+    margin-left: 82px;
+    margin-left: calc(70px + .5em);
 }
 
 .containerSpecs dt {
     font-size: 1.77777778em;
-    font-weight: bold;
     margin-top: 1em;
     margin-bottom: .5em;
     position: relative;
+    font-weight: normal;
+}
+.containerSpecs dd {
+    color: var(--white);
 }
 
 .containerSpecs > div dt::before {
     content: "";
     position: absolute;
-    width: 50px;
-    height: 50px;
-    background-image: url(../img/plusMark.svg);
+    width: 38px;
+    height: 38px;
+    background-image: url(../img/checkMark.svg);
     background-repeat: no-repeat;
     background-size: contain;
+    background-position: center;
+    background-origin: content-box;
+    border: 2px solid var(--violet);
+    padding: 15px;
     right: 100%;
-    transform: translateY(50%);
-    bottom: 0;
-    margin-right: .75em;
+    top: 0;
+    margin-right: .5em;
+}
+
+.cta-block {
+    text-align: center;
+    padding: 2em 0;
+}
+.cta-text {
+    font-size: 1.6em; /*1.78*/
+}
+
+.btn {
+    display: inline-block;
+    padding: 1em 2em;
+}
+
+.btn-cta {
+    color: var(--white);
+    background-color: var(--black);
+    border-radius: .5em;
+    text-transform: uppercase;
+}
+
+.btn-cta:hover {
+    color: var(--white);
+}
+
+.containerSpecs.financing dd {
+    color: var(--black);
+}
+
+.containerSpecs.financing {
+    counter-reset: count; 
+}
+
+.containerSpecs.financing dt {
+    counter-increment: count;
+}
+
+.containerSpecs.financing > div dt::before {
+    content: counter(count);
+    background-image: none;
+    color: var(--violet);
+    font-size: 2em;
+    text-align: center;
+    line-height: .35em;
+    vertical-align: bottom;
+    margin-right: .268em;
 }
 
 .timeline {
@@ -139,32 +173,55 @@
 .timeline > * {
     flex-shrink: 0;
 }
+.financinglist {
+    padding: 2em 0 1em 0;
+}
+
+.financinglist ul {
+    list-style-type: none;
+    padding: .5em 0 0 0;
+}
+.financinglist ul li {
+    margin-left: 1em;
+    text-indent: -1em;
+}
+.financinglist ul li::before {
+    content: "";
+    display: inline-block;
+    width: .25em;
+    height: .25em;
+    transform: rotateZ(-45deg);
+    background-color: var(--violet);
+    vertical-align: middle;
+    margin-right: .75em;
+}
 .calculate-limitedoffer {
-    background-color: #D7D5E8;
-    background-color: var(--pastel);
-    border-radius: .5em;
-    color: #323232;
-    color: var(--black);
-    font-size: .666667em;
-    font-weight: bold;
-    text-align: right;
-    padding: 1.3333em 2em;
+    max-width: 480px;
+    padding-top: 2em;
 }
 .calculate-table {
+    max-width: 720px;
     width: 100%;
     border-collapse: collapse;
+    color: #F2F2F2;
 }
 .calculate-table tr {
     border-top: 1.5px solid #FFFFFF;
-    border-top: 1.5px solid var(--white);
+    border-top: 1.5px solid var(--pastel);
     border-bottom: 1.5px solid #FFFFFF;
-    border-bottom: 1.5px solid var(--white);
+    border-bottom: 1.5px solid var(--pastel);
 }
 .calculate-table tr > * {
     display: block;
     padding: 0.2em;
 }
-.calculate-table td { white-space: nowrap; }
+.calculate-table td { 
+    white-space: nowrap; 
+    font-family: Arial, Helvetica, sans-serif;
+}
+.calculate-table .font { 
+    font-family: inherit;
+}
 .calculate-table td:nth-child(2) { 
     text-align: right; 
     font-weight: bold;
@@ -175,52 +232,68 @@
     color: #3D235A;
     color: var(--grape);
 }
+tr.calculate-table-strong {
+    border-top-color: transparent;
+    border-bottom-color: transparent;
+}
 .calculate-table-small {
     font-size: 0.85em;
     font-weight: normal;
 }
-.feedback-item h3 {
-    padding: 1em 0;
+.contact a,
+.address a {
+    color: var(--violet);
+    text-decoration: underline;
 }
-.bodyfooter {
-    position: relative;
+.contact a:hover,
+.address a:hover {
+    text-decoration: none;
 }
-
-.bodyfooter::before {
-    content: "";
-    display: block;
-    position: relative;
-    height: 116px;
-    z-index: 1;
-    background-image: url(../img/OCC_COVER_1920.jpg);
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center top;
-}
-
-.contact dt {
-    font-size: 1.555556em;
-}
-
 .address p {
     margin: 0;
 }
-.address a {
+.foundation-wrapper {
+    padding: 2em 0;
+}
+.foundation-wrapper p {
+    padding: 2em 1.5em;
+}
+.bodyfooter {
+    color: #919294;
+}
+.bodyfooter a {
     color: inherit;
 }
-.logo-wrapper {
-    display: flex;
-    justify-content: space-between;
-}
-.logo-nadace > span {
+
+.logo span {
     position: absolute;
     left: -9999px;
 }
-.logo-nadace::before {
-    content: url(../img/nadaceJT.svg);
+.logo.logo-foundation::before {
+    content: "";
+    display: block;
+    background-image: url(../img/nadaceJT.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    height: 135px;
+    max-width: 409px;
+}
+.logo-JaT::before {
+    content: url(../img/JaTleasingFooter.svg);
     display: block;
 }
-
+.logo-fb::before {
+    content: url(../img/fb.svg);
+}
+.logo-ig::before {
+    content: url(../img/ig.svg);
+}
+.bodyfooter-wrapper {
+    display: flex;
+    justify-content: space-between;
+    padding: 2em 1em;
+}
 
 /* mobil only features */
 @media only screen and (max-width: 759.9px) {
