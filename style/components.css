@@ -84,7 +84,7 @@
     font-weight: normal;
 }
 .containerSpecs dd {
-    color: var(--white);
+    color: #FFFFFF;
 }
 
 .containerSpecs > div dt::before {
@@ -97,7 +97,7 @@
     background-size: contain;
     background-position: center;
     background-origin: content-box;
-    border: 2px solid var(--violet);
+    border: 2px solid #6B6392;
     padding: 15px;
     right: 100%;
     top: 0;
@@ -118,18 +118,18 @@
 }
 
 .btn-cta {
-    color: var(--white);
-    background-color: var(--black);
+    color: #FFFFFF;
+    background-color: #323232;
     border-radius: .5em;
     text-transform: uppercase;
 }
 
 .btn-cta:hover {
-    color: var(--white);
+    color: #FFFFFF;
 }
 
 .containerSpecs.financing dd {
-    color: var(--black);
+    color: #323232;
 }
 
 .containerSpecs.financing {
@@ -143,12 +143,16 @@
 .containerSpecs.financing > div dt::before {
     content: counter(count);
     background-image: none;
-    color: var(--violet);
+    color: #6B6392;
     font-size: 2em;
     text-align: center;
-    line-height: .35em;
+    line-height: .50em;
     vertical-align: bottom;
     margin-right: .268em;
+}
+
+.containerSpecs.financing > div:nth-child(3) dt::before {
+    line-height: .30em;
 }
 
 .timeline {
@@ -157,7 +161,7 @@
     padding: 1.5em 0;
     margin: 0;
     overflow-x: auto;
-    scrollbar-color: var(--grape) var(--violet);
+    scrollbar-color: #3D235A #6B6392;
     scrollbar-width: thin;
     -ms-overflow-style: auto;
 }
@@ -165,13 +169,14 @@
     height: 10px;
 }
 .timeline::-webkit-scrollbar-track {
-    background: var(--violet);
+    background: #6B6392;
 }
 .timeline::-webkit-scrollbar-thumb {
-    background: var(--grape);
+    background: #3D235A;
 }
-.timeline > * {
+.timeline > img {
     flex-shrink: 0;
+    width: 1080px; /*IE*/
 }
 .financinglist {
     padding: 2em 0 1em 0;
@@ -191,7 +196,7 @@
     width: .25em;
     height: .25em;
     transform: rotateZ(-45deg);
-    background-color: var(--violet);
+    background-color: #6B6392;
     vertical-align: middle;
     margin-right: .75em;
 }
@@ -206,10 +211,8 @@
     color: #F2F2F2;
 }
 .calculate-table tr {
-    border-top: 1.5px solid #FFFFFF;
-    border-top: 1.5px solid var(--pastel);
-    border-bottom: 1.5px solid #FFFFFF;
-    border-bottom: 1.5px solid var(--pastel);
+    border-top: 1.5px solid #D7D5E8;
+    border-bottom: 1.5px solid #D7D5E8;
 }
 .calculate-table tr > * {
     display: block;
@@ -224,25 +227,24 @@
 }
 .calculate-table td:nth-child(2) { 
     text-align: right; 
+}
+.calculate-table tr:first-child td:nth-child(2) {
     font-weight: bold;
 }
-.calculate-table-strong {
+.calculate-table .calculate-table-strong {
     background-color: #D7D5E8;
-    background-color: var(--pastel);
     color: #3D235A;
-    color: var(--grape);
-}
-tr.calculate-table-strong {
-    border-top-color: transparent;
-    border-bottom-color: transparent;
 }
 .calculate-table-small {
     font-size: 0.85em;
     font-weight: normal;
 }
+.contact dd {
+    margin-bottom: 0;
+}
 .contact a,
 .address a {
-    color: var(--violet);
+    color: #6B6392;
     text-decoration: underline;
 }
 .contact a:hover,
@@ -257,6 +259,8 @@ tr.calculate-table-strong {
 }
 .foundation-wrapper p {
     padding: 2em 1.5em;
+    padding-right: 0;
+    font-size: 1.25em;
 }
 .bodyfooter {
     color: #919294;
@@ -269,6 +273,11 @@ tr.calculate-table-strong {
     position: absolute;
     left: -9999px;
 }
+.logo.logo-foundation {
+    height: 135px;
+    max-width: 409px;
+    display: block;
+}
 .logo.logo-foundation::before {
     content: "";
     display: block;
@@ -276,8 +285,8 @@ tr.calculate-table-strong {
     background-repeat: no-repeat;
     background-position: center;
     background-size: contain;
-    height: 135px;
-    max-width: 409px;
+    width: 100%;
+    height: 100%;
 }
 .logo-JaT::before {
     content: url(../img/JaTleasingFooter.svg);
@@ -299,4 +308,22 @@ tr.calculate-table-strong {
 @media only screen and (max-width: 759.9px) {
 
   
+}
+
+@media only screen and (min-width: 420px) {
+    h2 {
+        font-size: 2.75em;
+    }
+    .bodyfooter-wrapper {
+        padding: 2em 1em;
+    }
+    .calculate-table tr > * {
+        display: table-cell;
+        padding: 0.666em .666em .666em .2em;
+    }
+}
+@media only screen and (min-width: 540px) {
+    h2 {
+        font-size: 3.125em;
+    }
 }

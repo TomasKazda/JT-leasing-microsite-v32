@@ -12,7 +12,7 @@ html {
     font-weight: 400;
     font-size: 16px;
     scroll-behavior: smooth;
-    color: var(--black);
+    color: #323232;
 }
 body {
     color: inherit;

@@ -1,20 +1,3 @@
-@media only screen and (min-width: 420px) {
-    h2 {
-        font-size: 2.75em;
-    }
-    .bodyfooter-wrapper {
-        padding: 2em 1em;
-    }
-    .calculate-table tr > * {
-        display: table-cell;
-        padding: 0.666em .666em .666em .2em;
-    }
-}
-@media only screen and (min-width: 540px) {
-    h2 {
-        font-size: 3.125em;
-    }
-}
 @media only screen and (min-width: 720px) {
     .containerSpecs.benefits {
         display: flex;
@@ -23,6 +6,14 @@
     }
     .containerSpecs.benefits > div {
         flex-basis: calc(50% - (96px / 2) - 18px);
+    }
+    .foundation-wrapper {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .logo.logo-foundation {
+        width: 409px;
     }
 }
 @media only screen and (min-width: 760px) {
@@ -34,8 +25,8 @@
         padding: 2.666667em 5.3333334em;
     }
     .bodyheader .content {
-        padding: 0 5.3333334em;
         background-image: none;
+        padding-bottom: 7em;
     }
     .bodyheader .content::after {
         content: "";
@@ -45,16 +36,88 @@
         background-position: center right;
         position: absolute;
         width: 80%;
-        top: -50px;
+        top: 0;
         right: -100px;
         bottom: -120px;
     }
+    .bodyheader .trailer {
+        margin-left: -2em;
+        padding-top: 60px;
+        max-width: 380px;
+    }
+    .bodyheader .claim {
+        padding-bottom: 160px;
+        max-width: 370px;
+    }
+    .containerSpecs.benefits {
+        margin-left: 1em;
+    }
+    .timeline {
+        margin-left: -5em;
+        margin-right: -5em;
+    }
+    .foundation-wrapper p {
+        padding: 0;
+    }
 }
 @media only screen and (min-width: 860px) {
-
+    .containerSpecs.financing {
+        max-width: 800px;
+    }
 }
-@media only screen and (min-width: 1140px) {
 
+@media only screen and (orientation: landscape) and (max-width: 920px) {
+    .bodyheader .content {
+        padding-bottom: 1em;
+    }
+    .bodyheader .content::after {
+        background-position: top right;
+        width: 70%;
+        top: 0px;
+        right: -150px;
+        bottom: 0px;
+    }
+    .bodyheader .trailer {
+        padding-top: 65px;
+        max-width: 520px;
+    }
+    .bodyheader .claim {
+        padding-bottom: 1em;
+    }
+}
+
+@media only screen and (min-width: 1140px) {
+    .bodyheader .trailer {
+        font-size: 1.75em;
+        max-width: 570px;
+    }
+    .bodyheader .trailer > p {
+        max-width: 360px;
+    }
+    .bodyheader .trailer > p:nth-child(4) {
+        max-width: 480px;
+    }
+    .bodyheader .trailer .claim {
+        font-size: 2.322em;
+        max-width: none;
+        padding-bottom: 100px;
+    }
+    .bodyheader .content {
+        padding-bottom: 14em;
+    }
+    .bodyheader .content::after {
+        background-position: center right;
+        width: 70%;
+        top: 100px;
+        right: 0px;
+        bottom: 0px;
+    }
+    .containerSpecs.benefits {
+        margin-left: 0em;
+    }
+    .foundation-wrapper p {
+        font-size: 1.75em;
+    }
 }
 @media only screen and (min-width: 1777px) {
 
